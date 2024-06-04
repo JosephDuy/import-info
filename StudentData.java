@@ -1,57 +1,109 @@
+/**
+ * 
+ */
+package com.main;
 
-package com.student;
-
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class StudentData {
-
-	public double inputStudent(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter Name: ");
-		String name = sc.next();
-		System.out.print("Enter Class: ");
-		String className = sc.next();
-		System.out.print("Enter Math = ");
-		double math = sc.nextDouble();
-		System.out.print("Enter Literature = ");
-		double literature = sc.nextDouble();
-		System.out.print("Enter English = ");
-		double english = sc.nextDouble();
-		
-		double sum = (math + literature + english) / 3;
-		
-		sc.close();
-		return sum;
+	private String className;
+	private String name;
+	private float math;
+	private float English;
+	private float Phisical;
+	private int count = 0;
+	/**
+	 * @return the className
+	 */
+	/**
+	 * @return the className
+	 */
+	public String getClassName() {
+		return className;
+	}
+	/**
+	 * @param className the className to set
+	 */
+	public void setClassName(String className) {
+		this.className = className;
+	}
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+	/**
+	 * @return the math
+	 */
+	public float getMath() {
+		return math;
+	}
+	/**
+	 * @param math the math to set
+	 */
+	public void setMath(float math) {
+		this.math = math;
+	}
+	/**
+	 * @return the english
+	 */
+	public float getEnglish() {
+		return English;
+	}
+	/**
+	 * @param english the english to set
+	 */
+	public void setEnglish(float english) {
+		English = english;
+	}
+	/**
+	 * @return the phisical
+	 */
+	public float getPhisical() {
+		return Phisical;
+	}
+	/**
+	 * @param phisical the phisical to set
+	 */
+	public void setPhisical(float phisical) {
+		Phisical = phisical;
 	}
 	
-	public double continueStudent(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		String continueInput;
-		
-		System.out.print("Do you want to enter another number? (yes/no): ");
-        continueInput = sc.next();
-		do (continueInput.equalsIgnoreCase("yes")){
-			System.out.print("Enter Name: ");
-			String name = sc.next();
-			System.out.print("Enter Class: ");
-			String className = sc.next();
-			System.out.print("Enter Math = ");
-			double math = sc.nextDouble();
-			System.out.print("Enter Literature = ");
-			double literature = sc.nextDouble();
-			System.out.print("Enter English = ");
-			double english = sc.nextDouble();
-			
-			double sum = (math + literature + english) / 3;
-		
-		sc.close();
-		return double sum;
+	/**
+	 * @param className
+	 * @param name
+	 * @param math
+	 * @param english
+	 * @param phisical
+	 */
+	public StudentData(String className, String name, float math, float english, float phisical) {
+		super();
+		this.className = className;
+		this.name = name;
+		this.math = math;
+		English = english;
+		Phisical = phisical;
+	}
+	@Override
+	public String toString() {
+		return "StudentData [className=" + className + ", name=" + name + ", math=" + math + ", English=" + English
+				+ ", Phisical=" + Phisical + "]";
+	}
+	public boolean search(String name) {
+		return this.name.contains(name);
 	}
 	
-	public static void editStudent(String[] args) {
+	public float sum() { 
 		
+		return count ;
 	}
 
+	
 }
